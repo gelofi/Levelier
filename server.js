@@ -19,7 +19,7 @@ let domain = "" // change your domain here if you will host on Repl.
 
 setInterval(() => {
   http.get(domain)
-}, 180000) // every 5 minutes
+}, 180000) // every 3 minutes
 */
 
 module.exports = ping
