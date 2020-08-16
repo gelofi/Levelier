@@ -1,6 +1,6 @@
 dependencies:
   ascii-table: 0.0.9
-  discord.js: 12.2.0
+  discord.js: 12.3.1
   express: 4.17.1
   hexo-db: 1.5.0
 packages:
@@ -138,7 +138,7 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
-  /discord.js/12.2.0:
+  /discord.js/12.3.1:
     dependencies:
       '@discordjs/collection': 0.1.6
       '@discordjs/form-data': 3.0.1
@@ -151,15 +151,8 @@ packages:
     dev: false
     engines:
       node: '>=12.0.0'
-    peerDependencies:
-      bufferutil: ^4.0.1
-      erlpack: discordapp/erlpack
-      libsodium-wrappers: ^0.7.6
-      sodium: ^3.0.2
-      utf-8-validate: ^5.0.2
-      zlib-sync: ^0.1.6
     resolution:
-      integrity: sha512-Ueb/0SOsxXyqwvwFYFe0msMrGqH1OMqpp2Dpbplnlr4MzcRrFWwsBM9gKNZXPVBHWUKiQkwU8AihXBXIvTTSvg==
+      integrity: sha512-mSFyV/mbvzH12UXdS4zadmeUf8IMQOo/YdunubG1wWt1xjWvtaJz/s9CGsFD2B5pTw1W/LXxxUbrQjIZ/xlUdw==
   /ee-first/1.1.1:
     dev: false
     resolution:
@@ -619,6 +612,6 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   ascii-table: ^0.0.9
-  discord.js: ^12.2.0
+  discord.js: ^12.3.1
   express: ^4.17.1
   hexo-db: ^1.5.0
