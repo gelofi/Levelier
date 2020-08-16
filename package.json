@@ -1,0 +1,19 @@
+{
+  "name": "funcn",
+  "version": "1.0.0",
+  "description": "A Discord bot to assist Fizx.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "discord.js": "^12.2.0",
+    "ascii-table": "^0.0.9",
+    "hexo-db": "^1.5.0"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "Apache License 2.0"
+}
