@@ -1,25 +1,19 @@
-# Levelier
+# Levelite
 
-An open-source Discord leveling bot, coded in JavaScript.<br>
-Uses HexoDB 1.5 as its core database.
+A light-weight version of Levelier, an open-source Discord leveling bot.<br>
+Levelite is also minimalistic! Coded in CoffeeScript 2.5.1.<br>
+You may find the full version [here](https://github.com/Fizuku/Levelier/tree/master)
 
 ## Getting Started
-You may edit the [keys.json](keys.json) or the .env file to put the things required.
-- Your bot token
-- Prefix
-- HexoDB URL (Glitch or Repl.it)
-```json
-{
-  "token": "",
-  "prefix": "!",
-  "hexodb": ""
-}
+
+You may change your credentials in the index.js file.<br>
+Starting on `line 2: character 2` or at the .env file.
+```coffeescript
+keys =
+  token: ""
+  prefix: ""
+  hexodb: ""
 ```
-P.S. - The cooldown for this bot is editable in the `/events/level.js` file!
-<br> Default is 30.
-## Author
-*Fizx* - The creator!
 
 ## Support
-
-You may join our server [FizxCreations.](https://discord.gg/6uWa4Ga) to seek help and questions.
+You may seek support at my Discord server— [FizxCreations.](https://discord.gg/7zf7V4M)
