@@ -16,7 +16,7 @@ cooldownTime = 30 * 1000
 Hexo = require "hexo-db"
 db = new Hexo.Database process.env.hexodb or keys.hexodb
 
-bot.on "ready", () -> console.log "#{bot.user.username} is now online!"
+bot.on "ready", () -> console.log "#{bot.user.tag} is now online!"
 
 bot.on "message", (message) ->
   
@@ -33,15 +33,19 @@ bot.on "message", (message) ->
       cooldown.add message.author.id
       randXP = Math.floor(Math.random() * 14) + 1
       XP = await db.get "xp_#{message.guild.id}_#{message.author.id}"
-      if XP == null then await db.set "xp_#{message.guild.id}_#{message.author.id}", 1
-      await db.set "xp_#{message.guild.id}_#{message.author.id}", parseInt(XP) + randXP
+      if XP == "null" then await db.set "xp_#{message.guild.id}_#{message.author.id}", 1
+      getNewXP = await db.get "xp_#{message.guild.id}_#{message.author.id}"
+      newXP = parseInt(getNewXP) + randXP
+      await db.set "xp_#{message.guild.id}_#{message.author.id}", newXP
       level = await db.get "level_#{message.guild.id}_#{message.author.id}"
-      if level == null then await db.set "level_#{message.guild.id}_#{message.author.id}", 1
-      next = Math.floor Math.pow parseInt level  / 0.1, 2
+      if level == "null" then await db.set "level_#{message.guild.id}_#{message.author.id}", 1
+      getNewLvl = await db.get "level_#{message.guild.id}_#{message.author.id}"
+      next = Math.floor Math.pow parseInt getNewLvl  / 0.1, 2
 
       if xp > next
-        await db.set "level_#{message.guild.id}_#{message.author.id}", parseInt(level) + 1
-        message.reply "you leveled up to #{parseInt(level) + 1}! GG!"
+        newLevel = "level_#{message.guild.id}_#{message.author.id}"
+        await db.set "level_#{message.guild.id}_#{message.author.id}", parseInt(newLevel) + 1
+        message.reply "you leveled up to #{parseInt(newLevel) + 1}! GG!"
         
       timeout = -> cooldown.delete message.author.id
       setTimeout timeout, cooldownTime
@@ -130,4 +134,4 @@ bot.on "message", (message) ->
       message.channel.send(embed);
       break
       
-bot.login(process.env.token || keys.token)
+bot.login process.env.token or keys.token
