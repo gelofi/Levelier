@@ -7,7 +7,7 @@ Uses HexoDB 1.5 as its core database.
 You may edit the [keys.json](keys.json) or the .env file to put the things required.
 - Your bot token
 - Prefix
-- HexoDB URL (Glitch or Repl.it)
+- HexoDB URL (Glitch or Repl.it) (Get your [HexoShard](https://hexodb.glitch.me/) here)
 ```json
 {
   "token": "",
