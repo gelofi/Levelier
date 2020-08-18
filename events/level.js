@@ -13,7 +13,7 @@ module.exports = {
   async function xp(message) {
     try {
       if (client.cooldown.has(message.author.id)) return;
-      //client.cooldown.add(message.author.id);
+      client.cooldown.add(message.author.id);
       let xp = await db.get(`xp_${message.guild.id}_${message.author.id}`);
       if (xp == "null") await db.set(`xp_${message.guild.id}_${message.author.id}`, 1)
       let newXP = await db.get(`xp_${message.guild.id}_${message.author.id}`);
