@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "coffeescript": "^2.5.1",
-    "hexo-db": "^1.5.0",
+    "hexo-db": "^2.0.1",
     "discord.js": "^12.3.1"
   },
   "engines": {
