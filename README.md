@@ -21,5 +21,4 @@ P.S. - The cooldown for this bot is editable in the `/events/level.js` file!
 *Fizx* - The creator!
 
 ## Support
-
-You may join our server [FizxCreations.](https://discord.gg/6uWa4Ga) to seek help and questions.
+Contact me on Discord! (Fizx#5360)
